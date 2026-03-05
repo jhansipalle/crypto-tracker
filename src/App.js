@@ -20,18 +20,6 @@ function App() {
       .catch((err) => console.log(err));
   };
 
-  // FETCH USING ASYNC AWAIT
-  const fetchDataAsync = async () => {
-    try {
-      const res = await fetch(API);
-      const result = await res.json();
-      setData(result);
-      setFilteredData(result);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
 useEffect(() => {
   fetchDataThen();
 }, []);
